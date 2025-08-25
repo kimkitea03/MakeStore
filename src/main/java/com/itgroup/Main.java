@@ -33,22 +33,22 @@ public class Main {
                             }
                             switch (sellerMenu){
                                 case 1:
-//                                    manager.getmarketerone();
+                                    manager.getmarketerone();
                                     break;
                                 case 2:
-//                                    manager.getmarketpost();
+                                    manager.getmarketpost();
                                     break;
                                 case 3:
-//                                    manager.getmarketervol();
+                                    manager.getmarketervol();
                                     break;
                                 case 4:
-//                                    manager.setmarketerpost();
+                                    manager.setmarketerpost();
                                     break;
                                 case 5:
-//                                    manager.plusmaketerpost();
+                                    manager.plusmaketerpost();
                                     break;
                                 case 6:
-//                                    manager.dellmarketerpost();
+                                    manager.dellmarketerpost();
                                     break;
                             }
                         }
@@ -65,7 +65,7 @@ public class Main {
                         if (log == 1) {
                             while (true) {
                                 System.out.println("회원님 반갑습니다. 메뉴를 선택해 주세요");
-                                System.out.println("0: 로그아웃, 1: 회원 정보, 2: 게시물 보기, 3: 결제금액 확인, 4: 장바구니 넣기, 5: 장바구니 전부 비우기, 6: 장바구니 보기 , 7: 장바구니 안에 있는 것들 결제하기");
+                                System.out.println("0: 로그아웃, 1: 회원 정보, 2: 게시물 보기, 3: 결제금액 확인, 4: 장바구니 넣기, 5: 장바구니 보기");
 
                                 int sellerMenu = scan.nextInt();
 
@@ -87,13 +87,7 @@ public class Main {
                                         manager.setpushbasket();
                                         break;
                                     case 5:
-//                                        manager.setdellbasket();
-                                        break;
-                                    case 6:
                                         manager.lookbasket();
-                                        break;
-                                    case 7:
-//                                        manager.setplusbasket();
                                         break;
                                 }
 

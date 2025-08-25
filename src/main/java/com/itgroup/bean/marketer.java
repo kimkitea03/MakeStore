@@ -4,8 +4,8 @@ public class marketer {
     private String mid;
     private String mname;
     private String mpassword;
-    private int sell;
-    private String mvolume;
+    private String sell;
+    private int mvolume;
 
     public marketer() {
     }
@@ -34,23 +34,23 @@ public class marketer {
         this.mpassword = mpassword;
     }
 
-    public int getSell() {
+    public String getSell() {
         return sell;
     }
 
-    public void setSell(int sell) {
+    public void setSell(String sell) {
         this.sell = sell;
     }
 
-    public String getMvolume() {
+    public int getMvolume() {
         return mvolume;
     }
 
-    public void setMvolume(String mvolume) {
+    public void setMvolume(int mvolume) {
         this.mvolume = mvolume;
     }
 
-    public marketer(String mid, String mname, String mpassword, int sell, String mvolume) {
+    public marketer(String mid, String mname, String mpassword, String sell, int mvolume) {
         this.mid = mid;
         this.mname = mname;
         this.mpassword = mpassword;

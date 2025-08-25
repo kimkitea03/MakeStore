@@ -179,4 +179,40 @@ public class clientDao extends superDao{
         }
         return cnt;
     }
+
+    public int delletbasket(String id) {
+        int cnt=-1;
+        String spl = " update clie set basket = '없음' where cid = ?";
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try {
+            conn = super.getconnection();
+            pstmt=conn.prepareStatement(spl);
+            pstmt.setString(1,id);
+
+            cnt=pstmt.executeUpdate();
+
+            conn.commit();
+
+
+        }catch (Exception ex){
+            try {
+                conn.rollback();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }finally {
+            try {
+                if(conn != null){conn.close();}
+                if(pstmt != null){pstmt.close();}
+
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+        return cnt;
+
+    }
 }
