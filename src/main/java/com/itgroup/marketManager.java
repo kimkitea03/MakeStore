@@ -168,24 +168,7 @@ public class marketManager {
         }
     }
 
-    public void setdellbasket() {
-        String Id = scan.next();
-        int cnt = -1;
-        cnt= cliedao.delletbasket(Id);
-        client bean = cliedao.getbasket(Id);
-        if (cnt == -1){
-            System.out.println("장바구니 비우기 실패");
-        } else if (cnt == 1) {
-            System.out.println("장바구니 비우기 성공");
-            String bas = bean.getBasket();
-            System.out.println(bas+"이(가) 들어가 있습니다.");
 
-        }else {
-
-        }
-
-
-    }
 
     public void getmarketerone() {
         String Id= marketerId ;
@@ -194,7 +177,7 @@ public class marketManager {
         if (someone == null){
             System.out.println("회원님의 정보가 확인되지 않습니다.");
         }else {
-            System.out.println("아이디\t이름\t비밀번호\t구매한 악기\t결제한 금액\t멤버십 등급\t장바구니");
+            System.out.println("아이디\t이름\t비밀번호\t판매하는 악기\t판매금액");
             String cId =someone.getMid();
             String name = someone.getMname();
             String pass = someone.getMpassword();
